@@ -1,0 +1,42 @@
+/**
+ * @name Megumin Fix
+ * @author AI Optimized
+ * @version 1.0.0
+ * @description Absolute theme bypass
+ */
+
+/* 1. Root canvas override */
+#app-mount, 
+html, 
+body,
+[class*="app_"],
+[class*="bg_"] {
+  background: url(https://alphacoders.com) center/cover no-repeat !important;
+}
+
+/* 2. Strip panel backgrounds completely */
+[class*="layer_"],
+[class*="base_"],
+[class*="container_"],
+[class*="sidebar_"],
+[class*="chat_"],
+[class*="privateChannels_"],
+[class*="panels_"],
+[class*="members_"],
+[class*="scroller_"],
+[class*="nowPlayingColumn_"],
+[class*="pageWrapper_"] {
+  background: rgba(15, 10, 5, 0.45) !important;
+  background-color: rgba(15, 10, 5, 0.45) !important;
+}
+
+/* 3. Global CSS variable override */
+.theme-dark, .theme-light {
+  --background-primary: transparent !important;
+  --background-secondary: transparent !important;
+  --background-secondary-alt: transparent !important;
+  --background-tertiary: transparent !important;
+  --background-floating: rgba(0, 0, 0, 0.5) !important;
+  --bg-overlay-chat: transparent !important;
+  --bg-overlay-app-frame: transparent !important;
+}
